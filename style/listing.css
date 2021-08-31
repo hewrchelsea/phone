@@ -1,0 +1,128 @@
+.listing_header{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.listing_header .result_counter{
+    font-size: 1.5rem;
+}
+
+.listing_header .filter{
+    width: 150px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    background: #F2F5FA;
+}
+.listing_header .filter p{
+    margin-left: 10px;
+}
+.listing_header .filter img{
+    width: 16px;
+    margin-right: 10px;
+}
+
+
+.listings {
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.listings a{
+    text-decoration: none;
+    color: unset;
+    display: block;
+    width: 90%;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.listings .product{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #F2F5FA;
+    border-radius: 10px;
+    user-select: none;
+    /* justify-self: center; */
+}
+
+.listings .product .product_img{
+    height:65%;
+    margin: 10px 0;
+}
+
+.listings .product .product_title{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.listings .product .product_price{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+
+@media (min-width:665px) {
+
+    .listings {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .listings a{
+        width: 90%;
+    }
+
+
+}
+
+
+
+
+@media (min-width:1000px) {
+    .listings {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .listings a{
+        height: 250px;
+        width: 80.8%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .listings a{
+        height: 240px;
+    }
+}
+
+
+
+/*
+@media (prefers-color-scheme: dark) {
+    .listings .card{
+        background: #222222 ;
+    }
+    .listing_header .filter{
+        background: #222222;
+        color: #FFF;
+    }
+    .listing_header .filter img{
+        filter: invert(100%);
+    }
+}
+*/

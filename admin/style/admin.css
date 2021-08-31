@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    min-height: 619px;
+    min-width: 280px;
+    height: 100vh;
+    overflow-x:hidden;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+
+.title{
+    width: 100%;
+    height: 15vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.link{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    width: 100%;
+    height:130px;
+    background:#F2F5FA;
+    padding: 10.5px 7px 10.5px 7px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1.4px solid rgb(226, 226, 226);
+    margin-bottom: 30px;
+
+}
+
+.link h2{
+    display: block;
+    color: #000;
+    padding-bottom: 7px;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.link .icon{
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+}
+.link .box{
+    background: url('/phone/images/icons/box.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.link .league{
+    background: url('/phone/images/icons/league.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.link .club{
+    background: url('/phone/images/icons/club.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.link .collection{
+    background: url('/phone/images/icons/collection.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.link .plus{
+    position: relative;
+}
+
+.link .plus::after{
+    content: "+";
+    position: absolute;
+    font-size: 8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+}
+
+
+.link .update{
+    background: url('/phone/images/icons/update.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50%;
+    height: 50%;
+}
+
+
+@media (min-width:450px) {
+    .link{
+        width: 45%;
+    }
+}
+@media (min-width:600px) {
+    .link{
+        width: 30%;
+    }
+}
+@media (min-width:1000px) {
+    .link{
+        width: 22%;
+        height: 200px;
+    }
+    .link h2{
+        font-size: 1.6rem;
+    }
+}

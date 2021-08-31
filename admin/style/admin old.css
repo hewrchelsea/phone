@@ -1,0 +1,498 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    min-height: 619px;
+    min-width: 280px;
+}
+
+.title{
+    width: 90%;
+    height: 15vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input label{
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+.input input{
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    padding: 10px 10px 10px 10px;
+    background: transparent;
+    border-radius: 2px;
+}
+input[type=text]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 50%);
+}
+.addBtn{
+    width: 90%;
+    height: 45px;
+    background:#F2F5FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    user-select: none;
+}
+.addBtn .icon{
+    width: 15px;
+    position: absolute;
+    right: 3%;
+}
+
+.addBtn .icon div{
+    width: 15px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+}
+.addBtn .icon div:nth-child(1){
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.addBtn .icon .animateForward{
+    animation: rotateForward 300ms forwards;
+}
+.addBtn .icon .animateBack{
+    animation: rotateBack 300ms both;
+}
+@keyframes rotateForward{
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+@keyframes rotateBack{
+    0% {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.variant{
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.select_parent{
+    width: 100%;
+    position: relative;
+}
+
+
+.input .select_parent select{
+    width: 100%;
+    border: 2px solid #CCC;
+    height: 45px;
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.input .select_parent .custom_select{
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 10px 10px 10px 10px;
+    border-radius: 2px;
+}
+
+.input .select_parent .custom_select::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url('/phone/images/icons/arrow.png');
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    right: 3%;
+}
+
+select:focus + .custom_select {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 50%);
+}
+
+.upload, .upload_mockup{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload .custom_input_file_parent, .upload_mockup .custom_input_file_parent {
+    width: 100%;
+    position: relative;
+
+}
+.upload input, .upload_mockup input{
+    width: 100%;
+    height: 45px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.upload label, .upload_mockup label{
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+.upload .custom_input_file, .upload_mockup .custom_input_file{
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    font-size: 1.6rem;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.upload .custom_input_file::after, .upload_mockup .custom_input_file::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url('/phone/images/icons/upload.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.variant{
+    background: #F2F5FA;
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+.preview, .preview_mockup{
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: url('../../images/icons/transparent.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: none;
+}
+.preview img, .preview_mockup img{
+    height: 80%;
+    max-width: 90%;
+    object-fit: contain;
+}
+.preview .image_title, .preview_mockup .image_title{
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+.phone_list{
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    background: #F2F5FA;
+    padding-top: 20px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+
+.phone_list .input{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.phone_list button, .variant .addVariant, .mockups .addMockup_btn{
+    width: 90%;
+    height: 45px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 2px;
+}
+.input input{
+    background:none;
+}
+
+.phones{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: none;
+}
+.phones .phones_title, .variants .variants_title, .mockups_section .mockups_section_title{
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.phones .btn{
+    background: #F2F5FA;
+    min-height: 55px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+.phones .btn .device_name, .phones .btn  .device_id{
+    width: 100%;
+    text-align: center;
+}
+.phones .btn .deleteBtn{
+    width: 40px;
+    height: 51px;
+    background-image: url("../../images/icons/delete.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    background-color: #F2F5FA;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+}
+.phones .btn span{
+    font-size: 1.2rem;
+}
+
+
+
+.variants, .mockups_section{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.variants .card, .mockups_section .card{
+    width: 45%;
+    background-color: #F2F5FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-top: 5px solid #F2F5FA;
+    -webkit-box-shadow: 0px 0px 0px 2px #CCC;
+    box-shadow: 0px 0px 0px 2px #CCC;
+}
+
+.variants .card img, .mockups_section .card img{
+    height: 78px;
+    max-width: 90%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+.variants .card .variant_name, .mockups_section .card .name{
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 7px;
+}
+.variants .card button, .mockups_section .card button{
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    position: relative;
+    background: #FFF;
+}
+
+.variants .card button::after, .mockups_section .card button::after{
+    content: "";
+    width: 25px;
+    height: 100%;
+    background-image: url("../../images/icons/delete.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.addProduct{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 12px 0;
+    border-style: solid;
+    border: 0;
+    background-color: #000;
+    color: #EEE;
+    margin-bottom: 40px;
+    font-size: 1.7rem;
+}
+
+
+.input .error, .upload .error, .upload_mockup .error{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: rgb(238 52 18);
+}
+
+.input .error:empty, .upload .error:empty, .upload_mockup .error:empty{
+    display: none;
+}
+
+.invalid{
+    border-color: rgb(238 52 18)!important;
+    color: rgb(238 52 18)!important;
+}
+
+
+.cross{
+    background: transparent;
+    font-size: 30px;
+    color: black;
+    width: 30px;
+    height:30px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.mockups{
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;   
+    background: #F2F5FA;
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    background-image: url(/phone/images/icons/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    display: none;
+}
+
+.btn .msg{
+    width: 100%;
+    margin-top: 15px;
+    line-height: 150%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(238 52 18);
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+}
+
+.msg:empty, .errorAll:empty, .successAll:empty{
+    display: none;
+}
+
+.card .msg{
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 150%;
+    color: rgb(238 52 18);
+}
+
+.errorAll, .successAll{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.4rem;
+    color: rgb(238 52 18);
+}
+.successAll{
+    color: rgb(65 177 105)!important;
+}

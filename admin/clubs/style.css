@@ -1,0 +1,350 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    min-height: 619px;
+}
+
+h1{
+    width: 90%;
+    height: 15vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.input {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input label {
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.input input {
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    padding: 10px 10px 10px 10px;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.upload {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload label{
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.upload .custom_input_file_parent{
+    width: 100%;
+    position: relative;
+}
+
+.upload input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.upload .custom_input_file{
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    font-size: 1.6rem;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 2px;
+}
+.upload .custom_input_file::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(/phone/images/icons/upload.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.select_parent {
+    width: 100%;
+    position: relative;
+}
+
+.input .select_parent select {
+    width: 100%;
+    border: 2px solid #CCC;
+    height: 45px;
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.input .select_parent .custom_select {
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 10px 10px 10px 10px;
+    border-radius: 2px;
+}
+.input .select_parent .custom_select::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(/phone/images/icons/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    right: 3%;
+}
+
+.preview{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: url(../../images/icons/transparent.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    /* display: none;*/
+}
+
+.cross {
+    background: transparent;
+    font-size: 30px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.addClub, .addAll{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 12px 0;
+    border-style: solid;
+    border: 0;
+    background-color: #000;
+    color: #EEE;
+    margin-bottom: 40px;
+    font-size: 1.7rem;
+    border-radius: 2px;
+}
+
+.addAll{
+    display: none;
+}
+.preview img {
+    height: 80%;
+    max-width: 90%;
+    object-fit: contain;
+}
+
+.added_clubs {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.added_clubs .clubs_title{
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.added_clubs .card {
+    width: 45%;
+    background-color: #F2F5FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-top: 5px solid #F2F5FA;
+    -webkit-box-shadow: 0px 0px 0px 2px #ccc;
+    box-shadow: 0px 0px 0px 2px #ccc;
+}
+
+
+.added_clubs .card img {
+    height: 78px;
+    max-width: 90%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.added_clubs .card .club_name, .added_clubs .card .league_name{
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 7px;
+}
+
+.added_clubs .card button {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    position: relative;
+    background: #FFF;
+}
+
+.added_clubs .card button::after {
+    content: "";
+    width: 25px;
+    height: 100%;
+    background-image: url(../../images/icons/delete.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.input .error, .upload .error {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    border-color: rgb(238 52 18)!important;
+    color: rgb(238 52 18)!important;
+}
+
+
+.msg{
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px 5px 10px 5px;
+    color: #ee3412;
+}
+
+.loading{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    background-image: url("/phone/images/icons/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    display: none;
+}
+
+
+select:focus + .custom_select{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 50%);
+}
+
+input[type=file]:focus + .custom_input_file{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 50%);
+}
+
+input[type=text]:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 50%);
+}
+button:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 70%);
+}
+
+.invalid {
+    border-color: rgb(238 52 18)!important;
+    color: rgb(238 52 18)!important;
+}
+
+.errorAll, .successAll {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.4rem;
+    color: rgb(238 52 18);
+}
+
+.successAll {
+    color: rgb(65 177 105)!important;
+}
+
+.error:empty, .errorAll:empty, .successAll:empty{
+    display: none;
+}

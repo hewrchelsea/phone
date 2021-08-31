@@ -1,0 +1,424 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    min-height: 619px;
+}
+
+h1{
+    width: 90%;
+    height: 15vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.input {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input label {
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.input input {
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    padding: 10px 10px 10px 10px;
+    background: transparent;
+    border-radius: 2px;
+}
+
+#searchBarInput{
+    position: relative;
+    margin-bottom: 0px;
+}
+
+#searchBarInput button{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url(/phone/images/icons/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    border: none;
+}
+
+select:focus + .custom_select{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 50%);
+}
+
+input[type=file]:focus + .custom_input_file{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 50%);
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 50%);
+}
+button:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(131 192 253 / 70%);
+}
+
+.result {
+    width: 90%;
+    min-height: 100px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    background: #F2F5FA;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    padding: 20px 0;
+}
+.result:empty{
+    display: none!important;
+}
+
+.result .item {
+    width: 60%;
+    padding: 10px;
+    background: #FFF;
+    margin: 5px 0;
+    font-size: 1.4rem;
+    border: 2px solid #CCC;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.club{
+    background: #fff4e0;
+    width: 90%;
+    margin:0 auto;
+    padding: 20px 0;
+    display: none;
+    position: relative;
+}
+
+.select_parent {
+    width: 100%;
+    position: relative;
+}
+.input .select_parent select {
+    width: 100%;
+    border: 2px solid #CCC;
+    height: 45px;
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+}
+.input .select_parent .custom_select {
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 10px 10px 10px 10px;
+    border-radius: 2px;
+}
+.input .select_parent .custom_select::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(/phone/images/icons/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    right: 3%;
+}
+
+.upload {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload label {
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.upload .custom_input_file_parent {
+    width: 100%;
+    position: relative;
+}
+
+.upload input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.upload .custom_input_file {
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    font-size: 1.6rem;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.upload .custom_input_file::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(/phone/images/icons/upload.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.updateClub {
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: none;
+}
+
+.delete {
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: none;
+    background: #ee3412;
+}
+
+.preview {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: url(../../images/icons/transparent.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.cross {
+    background: transparent;
+    font-size: 30px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.preview img {
+    height: 80%;
+    max-width: 90%;
+    object-fit: contain;
+}
+
+.preview .image_title {
+    font-weight: normal;
+    font-size: 1.4r;
+}
+.reload {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 2.7%;
+    right: 8%;
+    background: url(/phone/images/icons/reload.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+}
+
+.loading {
+    width: 200%;
+    height: 100vh;
+    top: 0;
+    left: 50%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    background-image: url(/phone/images/icons/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 11111;
+}
+
+.successAll, .errorAll{
+    padding-bottom: 20px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 150%;
+}
+
+.successAll{
+    color:rgb(65, 177, 105);
+}
+.errorAll{
+    color: #ee3412;
+}
+
+
+.successAll:empty, .errorAll:empty{
+    display: none;
+}
+
+.error {
+    padding-top: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 150%;
+    color: #ee3412;
+    margin: 0 auto;
+}
+.error:empty{
+    display: none;
+}
+
+.invalid{
+    color: #ee3412;
+    border-color:#ee3412!important;
+}
+
+
+.pwdPopup-parent{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .7);
+    z-index: 10;
+}
+
+
+.pwdPopup{
+    width: 90%;
+    background: #FFF;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    border-top: 20px solid white;
+    border-bottom: 20px solid white;
+}
+.pwdPopup label{
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+.pwdPopup input{
+    width: 100%;
+    height: 45px;
+    border: 2px solid #CCC;
+    padding: 10px 10px 10px 10px;
+    background: none;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.pwdPopup button{    
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    background: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 2px;
+
+}
+.pwdPopup .error{
+    margin: unset;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: unset;
+    text-align: left;
+    padding: 0px;
+}
